@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hải Sản Vàm Láng – Từ biển quê nhà – Tươi ngon đến mọi nhà</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1800AD',
+                        primaryLight: '#2600D6',
+                        accent: '#4B69FF',
+                        surface: '#F1F3F8',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-slate-800 font-sans antialiased">
+
+    <!-- TOPBAR / HEADER -->
+    <header class="bg-primary text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <div class="bg-accent p-2 rounded-xl text-white">
+                    <i class="fa-solid fa-fish text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-lg md:text-xl font-black tracking-wider uppercase block">HẢI SẢN VÀM LÁNG</span>
+                    <span class="text-[10px] text-blue-200 tracking-widest block">Gò Công Đông - Đồng Tháp</span>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <a href="#home" class="hover:text-accent transition">Trang chủ</a>
+                <a href="#story" class="hover:text-accent transition">Câu chuyện</a>
+                <a href="#fresh-fish" class="hover:text-accent transition">Cá tươi</a>
+                <a href="#dried-fish" class="hover:text-accent transition">Cá khô</a>
+                <a href="#specialties" class="hover:text-accent transition">Đặc sản quê</a>
+                <a href="#process" class="hover:text-accent transition">Quy trình</a>
+                <a href="#location" class="hover:text-accent transition">Vùng đất</a>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <a href="tel:0912340292" class="hidden sm:flex items-center space-x-1 bg-accent hover:bg-blue-600 text-white px-3.5 py-2 rounded-lg text-xs font-bold transition shadow">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>0912.340.292</span>
+                </a>
+                <a href="https://zalo.me/0912340292" target="_blank" class="flex items-center space-x-1 bg-white text-primary hover:bg-slate-100 px-3.5 py-2 rounded-lg text-xs font-bold transition shadow">
+                    <i class="fa-solid fa-comment-dots text-accent"></i>
+                    <span class="hidden sm:inline">Zalo</span>
+                </a>
+                <button onclick="toggleMobileMenu()" class="md:hidden text-white p-2">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-primaryLight border-t border-blue-900 px-4 py-4 space-y-3">
+            <a href="#home" class="block hover:text-accent transition py-1">Trang chủ</a>
+            <a href="#story" class="block hover:text-accent transition py-1">Câu chuyện Vàm Láng</a>
+            <a href="#fresh-fish" class="block hover:text-accent transition py-1">Cá tươi theo ngày</a>
+            <a href="#dried-fish" class="block hover:text-accent transition py-1">Cá khô đặc sản</a>
+            <a href="#specialties" class="block hover:text-accent transition py-1">Đặc sản quê nhà</a>
+            <a href="#process" class="block hover:text-accent transition py-1">Quy trình vận chuyển</a>
+            <a href="#location" class="block hover:text-accent transition py-1">Vị trí & Lịch sử</a>
+        </div>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section id="home" class="relative bg-gradient-to-br from-primary via-primaryLight to-accent text-white py-20 lg:py-28 overflow-hidden">
+        <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <span class="inline-block bg-accent/30 border border-accent/50 text-blue-100 text-xs font-bold px-3.5 py-1.5 rounded-full tracking-wider uppercase">
+                    🌊 Làng chài Vàm Láng - Gò Công Đông
+                </span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+                    ĐẶC SẢN BIỂN <br/><span class="text-blue-300">VÀM LÁNG</span>
+                </h1>
+                <p class="text-lg sm:text-xl font-medium text-blue-100 italic">
+                    "Từ biển quê nhà – Tươi ngon đến mọi nhà."
+                </p>
+                <p class="text-slate-200 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                    Chúng tôi mang đến những sản phẩm cá tươi được đánh bắt hằng ngày cùng các loại cá khô đặc sản được chế biến từ nguồn hải sản địa phương. Mỗi sản phẩm là một phần hương vị của quê hương Vàm Láng.
+                </p>
+                <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-2">
+                    <a href="tel:0912340292" class="bg-white text-primary hover:bg-slate-100 font-bold px-6 py-3.5 rounded-xl shadow-lg transition flex items-center space-x-2">
+                        <i class="fa-solid fa-phone text-accent"></i>
+                        <span>GỌI ĐẶT HÀNG NGAY</span>
+                    </a>
+                    <a href="https://zalo.me/0912340292" target="_blank" class="bg-accent text-white hover:bg-blue-600 font-bold px-6 py-3.5 rounded-xl shadow-lg transition flex items-center space-x-2">
+                        <i class="fa-solid fa-comment"></i>
+                        <span>NHẮN TIN ZALO</span>
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-3 gap-4 pt-8 border-t border-white/10 text-center lg:text-left">
+                    <div>
+                        <p class="font-bold text-lg text-blue-200">Hàng trong ngày</p>
+                        <p class="text-xs text-slate-300">Theo chuyến biển đánh bắt</p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-lg text-blue-200">Chuẩn vị quê</p>
+                        <p class="text-xs text-slate-300">Đặc sản truyền thống</p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-lg text-blue-200">Đóng gói kỹ</p>
+                        <p class="text-xs text-slate-300">Đá lạnh & thùng xốp</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lg:col-span-5 relative">
+                <div class="relative mx-auto max-w-md rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 bg-slate-900">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" alt="Hải sản Vàm Láng" class="w-full h-[380px] object-cover hover:scale-105 transition duration-500">
+                    <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/90 to-transparent p-6 text-white">
+                        <span class="bg-accent text-[11px] font-bold px-2.5 py-1 rounded uppercase">Đánh bắt thực tế</span>
+                        <p class="font-bold text-base mt-1">Hải sản tươi sống cập bến Vàm Láng mỗi sớm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CÂU CHUYỆN LÀNG CHÀI VÀM LÁNG -->
+    <section id="story" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-accent font-bold uppercase tracking-widest text-xs">Câu chuyện quê hương</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-slate-900 leading-tight">
+                        VÀM LÁNG – HƯƠNG VỊ TỪ BIỂN QUÊ NHÀ
+                    </h2>
+                    <div class="space-y-4 text-slate-600 text-base leading-relaxed">
+                        <p>
+                            Vàm Láng là vùng đất ven biển gắn liền với cuộc sống của những người ngư dân. Từ bao đời nay, biển cả đã trở thành nguồn sống, là nơi nuôi dưỡng những chuyến tàu ra khơi và những mẻ cá tươi trở về.
+                        </p>
+                        <p>
+                            Khi bình minh vừa ló dạng, những chiếc thuyền đánh cá lần lượt cập bến, mang theo thành quả của những chuyến biển. Cá được lựa chọn, phân loại và đưa đến tay khách hàng. Bên cạnh hải sản tươi, người dân nơi đây còn lưu giữ nghề chế biến cá khô, tạo nên những món đặc sản mang hương vị đặc trưng của vùng biển quê nhà.
+                        </p>
+                        <p class="font-semibold text-primary">
+                            Từ những chuyến biển ấy, chúng tôi mong muốn đưa hương vị Vàm Láng đến gần hơn với mọi gia đình.
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#location" class="inline-flex items-center space-x-2 text-primary font-bold hover:text-accent transition">
+                            <span>Khám phá vùng đất Vàm Láng</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=600&q=80" alt="Thuyền đánh cá Vàm Láng" class="rounded-2xl shadow-md h-48 w-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80" alt="Cá khô đặc sản" class="rounded-2xl shadow-md h-64 w-full object-cover">
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=80" alt="Ngư dân làng chài" class="rounded-2xl shadow-md h-64 w-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=80" alt="Biển Vàm Láng" class="rounded-2xl shadow-md h-48 w-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DANH MỤC SẢN PHẨM: CÁ TƯƠI -->
+    <section id="fresh-fish" class="py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-accent font-bold uppercase tracking-widest text-xs">Hải sản đánh bắt hằng ngày</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-1">TƯƠI NGON TỪ CHUYẾN BIỂN</h2>
+                </div>
+                <p class="text-slate-600 max-w-md text-sm mt-2 md:mt-0">
+                    Hải sản được tuyển chọn theo nguồn hàng từng ngày, tùy thuộc vào sản lượng và mùa vụ đánh bắt.
+                </p>
+            </div>
+
+            <!-- Grid sản phẩm cá tươi -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Item 1 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-lg transition group">
+                    <div class="relative h-48 bg-slate-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80" alt="Cá Thu" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <span class="absolute top-3 left-3 bg-primary text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Cá Tươi</span>
+                        <span class="absolute top-3 right-3 bg-emerald-600 text-white text-[10px] font-bold px-2 py-1 rounded-full">Còn hàng</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-1">Cá Thu Tươi</h3>
+                            <p class="text-xs text-slate-500 mb-2">Quy cách: Cắt khúc / Nguyên con (1kg)</p>
+                            <p class="text-sm text-slate-600 mb-4 line-clamp-2">Cá thu đánh bắt trong chuyến biển gần, thịt chắc ngọt, giàu dinh dưỡng.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between mt-auto">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Giá bán</span>
+                                <span class="text-primary font-black text-lg">220.000 đ/kg</span>
+                            </div>
+                            <div class="flex space-x-1.5">
+                                <a href="tel:0912340292" class="bg-primary hover:bg-primaryLight text-white p-2.5 rounded-xl text-xs font-bold transition" title="Gọi đặt hàng">
+                                    <i class="fa-solid fa-phone"></i>
+                                </a>
+                                <a href="https://zalo.me/0912340292" target="_blank" class="bg-accent hover:bg-blue-600 text-white p-2.5 rounded-xl text-xs font-bold transition" title="Nhắn Zalo">
+                                    <i class="fa-solid fa-comment"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-lg transition group">
+                    <div class="relative h-48 bg-slate-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=80" alt="Cá Nục" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <span class="absolute top-3 left-3 bg-primary text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Cá Tươi</span>
+                        <span class="absolute top-3 right-3 bg-emerald-600 text-white text-[10px] font-bold px-2 py-1 rounded-full">Còn hàng</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-1">Cá Nục Biển</h3>
+                            <p class="text-xs text-slate-500 mb-2">Quy cách: Đóng thùng đá (1kg)</p>
+                            <p class="text-sm text-slate-600 mb-4 line-clamp-2">Cá nục tươi rói, thích hợp kho tiêu, nấu ngọt hoặc nướng.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between mt-auto">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Giá bán</span>
+                                <span class="text-primary font-black text-lg">85.000 đ/kg</span>
+                            </div>
+                            <div class="flex space-x-1.5">
+                                <a href="tel:0912340292" class="bg-primary hover:bg-primaryLight text-white p-2.5 rounded-xl text-xs font-bold transition" title="Gọi đặt hàng">
+                                    <i class="fa-solid fa-phone"></i>
+                                </a>
+                                <a href="https://zalo.me/0912340292" target="_blank" class="bg-accent hover:bg-blue-600 text-white p-2.5 rounded-xl text-xs font-bold transition" title="Nhắn Zalo">
+                                    <i class="fa-solid fa-comment"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-lg transition group">
+                    <div class="relative h-48 bg-slate-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80" alt="Cá Đù" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <span class="absolute top-3 left-3 bg-primary text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Cá Tươi</span>
+                        <span class="absolute top-3 right-3 bg-emerald-600 text-white text-[10px] font-bold px-2 py-1 rounded-full">Còn hàng</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-1">Cá Đù Tươi</h3>
+                            <p class="text-xs text-slate-500 mb-2">Quy cách: Tươi nguyên con (1kg)</p>
+                            <p class="text-sm text-slate-600 mb-4 line-clamp-2">Thịt cá đù béo ngọt, có thể dùng làm tươi chiên giòn hoặc nấu canh.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between mt-auto">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Giá bán</span>
+                                <span class="text-primary font-black text-lg">110.000 đ/kg</span>
+                            </div>
+                            <div class="flex space-x-1.5">
+                                <a href="tel:0912340292" class="bg-primary hover:bg-primaryLight text-white p-2.5 rounded-xl text-xs font-bold transition" title="Gọi đặt hàng">
+                                    <i class="fa-solid fa-phone"></i>
+                                </a>
+                                <a href="https://zalo.me/0912340292" target="_blank" class="bg-accent hover:bg-blue-600 text-white p-2.5 rounded-xl text-xs font-bold transition" title="Nhắn Zalo">
+                                    <i class="fa-solid fa-comment"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-lg transition group">
+                    <div class="relative h-48 bg-slate-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=600&q=80" alt="Cá Hố" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <span class="absolute top-3 left-3 bg-primary text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Cá Tươi</span>
+                        <span class="absolute top-3 right-3 bg-amber-600 text-white text-[10px] font-bold px-2 py-1 rounded-full">Hạn chế theo chuyến</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-1">Cá Hố Tươi</h3>
+                            <p class="text-xs text-slate-500 mb-2">Quy cách: Nguyên con (1kg)</p>
+                            <p class="text-sm text-slate-600 mb-4 line-clamp-2">Thân dẹt, thịt thơm chắc, đặc sản quen thuộc của ngư dân vùng biển Vàm Láng.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between mt-auto">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Giá bán</span>
+                                <span class="text-primary font-black text-lg">140.000 đ/kg</span>
+                            </div>
+                            <div class="flex space-x-1.5">
+                                <a href="tel:0912340292" class="bg-primary hover:bg-primaryLight text-white p-2.5 rounded-xl text-xs font-bold transition" title="Gọi đặt hàng">
+                                    <i class="fa-solid fa-phone"></i>
+                                </a>
+                                <a href="https://zalo.me/0912340292" target="_blank" class="bg-accent hover:bg-blue-600 text-white p-2.5 rounded-xl text-xs font-bold transition" title="Nhắn Zalo">
+                                    <i class="fa-solid fa-comment"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DANH MỤC SẢN PHẨM: CÁ KHÔ -->
+    <section id="dried-fish" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-accent font-bold uppercase tracking-widest text-xs">Đặc sản truyền thống vùng biển</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-1">ĐẶC SẢN KHÔ – ĐẬM ĐÀ HƯƠNG VỊ</h2>
+                </div>
+                <p class="text-slate-600 max-w-md text-sm mt-2 md:mt-0">
+                    Những mẻ cá được lựa chọn và chế biến theo cách làm của người dân vùng biển, lưu giữ hương vị đặc trưng của quê nhà.
+                </p>
+            </div>
+
+            <!-- Grid sản phẩm cá khô -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Item 1 -->
+                <div class="bg-surface rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-lg transition group">
+                    <div class="relative h-48 bg-slate-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80" alt="Khô cá chỉ vàng" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <span class="absolute top-3 left-3 bg-amber-700 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Cá Khô</span>
+                        <span class="absolute top-3 right-3 bg-emerald-600 text-white text-[10px] font-bold px-2 py-1 rounded-full">Còn hàng</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-1">Khô Cá Chỉ Vàng</h3>
+                            <p class="text-xs text-slate-500 mb-2">Quy cách: Gói 500g</p>
+                            <p class="text-sm text-slate-600 mb-4 line-clamp-2">Phơi đủ nắng, vị ngọt tự nhiên, nướng hoặc chiên chấm tương ớt tuyệt hảo.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex items-center justify-between mt-auto">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Giá bán</span>
+                                <span class="text-primary font-black text-lg">160.000 đ/500g</span>
+                            </div>
+                            <div class="flex space-x-1.5">
+                                <a href="tel:0912340292" class="bg-primary hover:bg-primaryLight text-white p-2.5 rounded-xl text-xs font-bold transition" title="Gọi đặt hàng">
+                                    <i class="fa-solid fa-phone"></i>
+                                </a>
+                                <a href="https://zalo.me/0912340292" target="_blank" class="bg-accent hover:bg-blue-600 text-white p-2.5 rounded-xl text-xs font-bold transition" title="Nhắn Zalo">
+                                    <i class="fa-solid fa-comment"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="bg-surface rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-lg transition group">
+                    <div class="relative h-48 bg-slate-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=80" alt="Khô cá đù" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <span class="absolute top-3 left-3 bg-amber-700 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Cá Khô</span>
+                        <span class="absolute top-3 right-3 bg-emerald-600 text-white text-[10px] font-bold px-2 py-1 rounded-full">Còn hàng</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-1">Khô Cá Đù Một Nắng</h3>
+                            <p class="text-xs text-slate-500 mb-2">Quy cách: Gói 500g</p>
+                            <p class="text-sm text-slate-600 mb-4 line-clamp-2">Cá đù muối vừa ăn, phơi một nắng dẻo thịt, chiên giòn ăn kèm cơm trắng.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex items-center justify-between mt-auto">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Giá bán</span>
+                                <span class="text-primary font-black text-lg">150.000 đ/500g</span>
+                            </div>
+                            <div class="flex space-x-1.5">
+                                <a href="tel:0912340292" class="bg-primary hover:bg-primaryLight text-white p-2.5 rounded-xl text-xs font-bold transition" title="Gọi đặt hàng">
+                                    <i class="fa-solid fa-phone"></i>
+                                </a>
+                                <a href="https://zalo.me/0912340292" target="_blank" class="bg-accent hover:bg-blue-600 text-white p-2.5 rounded-xl text-xs font-bold transition" title="Nhắn Zalo">
+                                    <i class="fa-solid fa-comment"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="bg-surface rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-lg transition group">
+                    <div class="relative h-48 bg-slate-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80" alt="Khô cá hố" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <span class="absolute top-3 left-3 bg-amber-700 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Cá Khô</span>
+                        <span class="absolute top-3 right-3 bg-emerald-600 text-white text-[10px] font-bold px-2 py-1 rounded-full">Còn hàng</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-1">Khô Cá Hố Tẩm Vị</h3>
+                            <p class="text-xs text-slate-500 mb-2">Quy cách: Gói 500g</p>
+                            <p class="text-sm text-slate-600 mb-4 line-clamp-2">Được cắt lát mỏng vừa ăn, tẩm gia vị truyền thống, nướng than thơm lừng.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex items-center justify-between mt-auto">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Giá bán</span>
+                                <span class="text-primary font-black text-lg">180.000 đ/500g</span>
+                            </div>
+                            <div class="flex space-x-1.5">
+                                <a href="tel:0912340292" class="bg-primary hover:bg-primaryLight text-white p-2.5 rounded-xl text-xs font-bold transition" title="Gọi đặt hàng">
+                                    <i class="fa-solid fa-phone"></i>
+                                </a>
+                                <a href="https://zalo.me/0912340292" target="_blank" class="bg-accent hover:bg-blue-600 text-white p-2.5 rounded-xl text-xs font-bold transition" title="Nhắn Zalo">
+                                    <i class="fa-solid fa-comment"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="bg-surface rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col hover:shadow-lg transition group">
+                    <div class="relative h-48 bg-slate-100 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=600&q=80" alt="Cá cơm khô" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <span class="absolute top-3 left-3 bg-amber-700 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">Cá Khô</span>
+                        <span class="absolute top-3 right-3 bg-emerald-600 text-white text-[10px] font-bold px-2 py-1 rounded-full">Còn hàng</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900 mb-1">Cá Cơm Khô Sạch</h3>
+                            <p class="text-xs text-slate-500 mb-2">Quy cách: Gói 500g</p>
+                            <p class="text-sm text-slate-600 mb-4 line-clamp-2">Cá cơm nhỏ đánh bắt và phơi sạch trên giàn cao, kho tiêu hoặc rang tỏi ớt.</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 flex items-center justify-between mt-auto">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Giá bán</span>
+                                <span class="text-primary font-black text-lg">120.000 đ/500g</span>
+                            </div>
+                            <div class="flex space-x-1.5">
+                                <a href="tel:0912340292" class="bg-primary hover:bg-primaryLight text-white p-2.5 rounded-xl text-xs font-bold transition" title="Gọi đặt hàng">
+                                    <i class="fa-solid fa-phone"></i>
+                                </a>
+                                <a href="https://zalo.me/0912340292" target="_blank" class="bg-accent hover:bg-blue-600 text-white p-2.5 rounded-xl text-xs font-bold transition" title="Nhắn Zalo">
+                                    <i class="fa-solid fa-comment"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ĐẶC SẢN QUÊ NHÀ -->
+    <section id="specialties" class="py-16 bg-blue-950 text-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <span class="text-accent font-bold uppercase tracking-widest text-xs">Bản sắc địa phương</span>
+            <h2 class="text-3xl sm:text-4xl font-black mt-1 mb-4">ĐẶC SẢN QUÊ NHÀ – TỪ BIỂN VÀO BẾP</h2>
+            <p class="text-blue-200 max-w-2xl mx-auto mb-10 text-sm sm:text-base">
+                Những sản phẩm do người dân địa phương đánh bắt, tuyển chọn và chế biến, mang hương vị đặc trưng của quê hương Vàm Láng với tinh thần: Hàng quê làm ra, hương vị địa phương và đậm đà chất quê trong từng sản phẩm.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                <div class="bg-primary/60 border border-blue-800 p-6 rounded-2xl">
+                    <div class="text-accent text-2xl mb-3"><i class="fa-solid fa-anchor"></i></div>
+                    <h3 class="font-bold text-lg mb-2">Đánh bắt truyền thống</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">Sản phẩm có nguồn gốc rõ ràng từ các ghe tàu bám biển lâu năm tại vùng cửa biển Vàm Láng.</p>
+                </div>
+                <div class="bg-primary/60 border border-blue-800 p-6 rounded-2xl">
+                    <div class="text-accent text-2xl mb-3"><i class="fa-solid fa-sun"></i></div>
+                    <h3 class="font-bold text-lg mb-2">Phơi nắng tự nhiên</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">Các mặt hàng cá khô được phơi dưới ánh nắng tự nhiên ven biển, giữ nguyên vị ngọt đậm đà.</p>
+                </div>
+                <div class="bg-primary/60 border border-blue-800 p-6 rounded-2xl">
+                    <div class="text-accent text-2xl mb-3"><i class="fa-solid fa-house-chimney"></i></div>
+                    <h3 class="font-bold text-lg mb-2">Chuẩn tay người miền Tây</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">Chế biến cẩn thận theo công thức gia truyền của người dân làng chài, không chất bảo quản độc hại.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KHU VỰC GỢI Ý CHO MẸ BẦU -->
+    <section class="py-16 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="bg-blue-50 border border-blue-200 rounded-3xl p-8 lg:p-12">
+                <div class="max-w-3xl">
+                    <span class="bg-accent text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Gợi ý dinh dưỡng</span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-3 mb-4">CHỌN CÁ ĐÚNG – DINH DƯỠNG CHO MẸ</h2>
+                    <p class="text-slate-700 text-sm sm:text-base leading-relaxed mb-6">
+                        Một số loại cá có thể cung cấp protein và các dưỡng chất cần thiết trong thai kỳ. Hãy lựa chọn sản phẩm có nguồn gốc rõ ràng và chế biến chín kỹ.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                        <div class="bg-white p-4 rounded-xl border border-blue-100 shadow-sm flex items-start space-x-3">
+                            <i class="fa-solid fa-circle-check text-accent mt-1"></i>
+                            <div>
+                                <p class="font-bold text-slate-900 text-sm">Cá thu, cá nục, cá cơm</p>
+                                <p class="text-xs text-slate-600 mt-0.5">Cung cấp nguồn protein và dưỡng chất dồi dào khi được nấu chín hoàn toàn.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl border border-blue-100 shadow-sm flex items-start space-x-3">
+                            <i class="fa-solid fa-triangle-exclamation text-amber-600 mt-1"></i>
+                            <div>
+                                <p class="font-bold text-slate-900 text-sm">Lưu ý về cá khô & hải sản</p>
+                                <p class="text-xs text-slate-600 mt-0.5">Cá khô có chứa hàm lượng muối, cần tham khảo kỹ trước khi dùng và luôn nấu chín kỹ.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-500 italic">
+                        * Khuyến cáo: Phụ nữ mang thai nên tham khảo ý kiến chuyên gia y tế hoặc bác sĩ dinh dưỡng về chế độ ăn uống phù hợp trong suốt thai kỳ.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUY TRÌNH TỪ BIỂN ĐẾN TAY KHÁCH HÀNG -->
+    <section id="process" class="py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-accent font-bold uppercase tracking-widest text-xs">Minh bạch & Tin cậy</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-1">TỪ CHUYẾN BIỂN ĐẾN BỮA CƠM GIA ĐÌNH</h2>
+                <p class="text-slate-600 text-sm mt-2">Hành trình 4 bước đưa hải sản tươi sạch từ Vàm Láng đến tận tay khách hàng.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Bước 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 relative">
+                    <div class="absolute -top-4 left-6 bg-primary text-white font-black w-8 h-8 rounded-xl flex items-center justify-center text-sm shadow">01</div>
+                    <h3 class="font-bold text-lg text-slate-900 mt-2 mb-2">Khách đặt hàng</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Khách hàng liên hệ trực tiếp qua điện thoại hoặc Zalo để được tư vấn loại cá, giá bán và tình trạng hàng trong ngày.
+                    </p>
+                </div>
+
+                <!-- Bước 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 relative">
+                    <div class="absolute -top-4 left-6 bg-primary text-white font-black w-8 h-8 rounded-xl flex items-center justify-center text-sm shadow">02</div>
+                    <h3 class="font-bold text-lg text-slate-900 mt-2 mb-2">Đánh bắt & Thu gom</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Hải sản được thu gom theo chuyến biển, lựa chọn theo nguồn hàng thực tế tại địa phương từ ngư dân Vàm Láng.
+                    </p>
+                </div>
+
+                <!-- Bước 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 relative">
+                    <div class="absolute -top-4 left-6 bg-primary text-white font-black w-8 h-8 rounded-xl flex items-center justify-center text-sm shadow">03</div>
+                    <h3 class="font-bold text-lg text-slate-900 mt-2 mb-2">Phân loại & Đóng gói</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Sản phẩm được kiểm tra, phân loại. Cá tươi được bảo quản bằng thùng xốp và đá lạnh để duy trì chất lượng khi vận chuyển.
+                    </p>
+                </div>
+
+                <!-- Bước 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 relative">
+                    <div class="absolute -top-4 left-6 bg-primary text-white font-black w-8 h-8 rounded-xl flex items-center justify-center text-sm shadow">04</div>
+                    <h3 class="font-bold text-lg text-slate-900 mt-2 mb-2">Giao hàng tận nơi</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Đơn hàng được gửi đến khách hàng nhanh chóng. Quý khách kiểm tra sản phẩm khi nhận theo chính sách của cửa hàng.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VÙNG ĐẤT VÀM LÁNG & BẢN ĐỒ -->
+    <section id="location" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-accent font-bold uppercase tracking-widest text-xs">Vị trí địa lý</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-slate-900">VÙNG ĐẤT BIỂN VÀM LÁNG</h2>
+                    <ul class="space-y-3 text-slate-600 text-sm sm:text-base">
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-location-dot text-primary mt-1"></i>
+                            <span>Vàm Láng thuộc khu vực Gò Công Đông, tỉnh Đồng Tháp (vùng ven biển Nam Bộ).</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-water text-primary mt-1"></i>
+                            <span>Khu vực ven biển sầm uất với hoạt động khai thác, thu mua và kinh doanh hải sản lâu đời.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-ship text-primary mt-1"></i>
+                            <span>Cuộc sống người dân gắn bó mật thiết với nghề biển, ghe tàu và các dịch vụ hậu cần thủy sản.</span>
+                        </li>
+                    </ul>
+                    <div>
+                        <a href="https://maps.google.com/?q=Vam+Lang+Go+Cong+Dong" target="_blank" class="inline-flex items-center space-x-2 bg-primary hover:bg-primaryLight text-white font-bold px-6 py-3 rounded-xl transition shadow">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                            <span>Xem vị trí trên Google Maps</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="bg-slate-100 rounded-3xl p-4 border border-slate-200 shadow-inner">
+                        <div class="bg-slate-300 rounded-2xl h-80 flex items-center justify-center relative overflow-hidden group">
+                            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80" alt="Bản đồ vùng biển Vàm Láng" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <div class="absolute inset-0 bg-primary/30 flex items-center justify-center">
+                                <div class="bg-white/90 backdrop-blur-md px-6 py-4 rounded-2xl shadow-lg text-center">
+                                    <p class="font-black text-primary text-lg">Vàm Láng, Gò Công Đông</p>
+                                    <p class="text-xs text-slate-600 mt-1">Tâm điểm hải sản tươi và cá khô miền Tây</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ĐÁNH GIÁ KHÁCH HÀNG -->
+    <section class="py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-accent font-bold uppercase tracking-widest text-xs">Phản hồi thực tế</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-1">KHÁCH HÀNG NÓI GÌ VỀ HẢI SẢN VÀM LÁNG?</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-500 text-sm mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm italic mb-4">
+                            "Cá thu tươi rói, giao đến nhà vẫn còn giữ đá lạnh rất kỹ. Kho tiêu lên thơm phức vị cá biển đúng chuẩn miền Tây. Sẽ ủng hộ dài lâu!"
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center text-sm">H</div>
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Chị Hoài Thương</p>
+                            <p class="text-xs text-slate-500">Quận 7, TP.HCM • Mua cá tươi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-500 text-sm mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm italic mb-4">
+                            "Khô cá đù một nắng và khô chỉ vàng rất ngon, vừa ăn không bị mặn gắt. Đóng gói hút chân không sạch sẽ, biếu tặng hay ăn gia đình đều tuyệt."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center text-sm">T</div>
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Anh Minh Tuấn</p>
+                            <p class="text-xs text-slate-500">TP. Biên Hòa • Mua cá khô</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-500 text-sm mb-3">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 text-sm italic mb-4">
+                            "Liên hệ qua Zalo được shop tư vấn rất nhiệt tình theo chuyến biển hằng ngày. Hàng nhận chuẩn cá đánh bắt tự nhiên, rất đáng tin cậy."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-slate-100">
+                        <div class="w-10 h-10 rounded-full bg-primary text-white font-bold flex items-center justify-center text-sm">M</div>
+                        <div>
+                            <p class="font-bold text-slate-900 text-sm">Chị Ngọc Mai</p>
+                            <p class="text-xs text-slate-500">Mỹ Tho, Tiền Giang • Mua hải sản</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary text-white pt-16 pb-12 border-t border-blue-900">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <div class="space-y-4">
+                <div class="flex items-center space-x-2">
+                    <div class="bg-accent p-2 rounded-xl text-white">
+                        <i class="fa-solid fa-fish text-xl"></i>
+                    </div>
+                    <span class="text-lg font-black tracking-wider uppercase">HẢI SẢN VÀM LÁNG</span>
+                </div>
+                <p class="text-blue-100 text-xs leading-relaxed">
+                    "Từ biển quê nhà – Tươi ngon đến mọi nhà." Chuyên cung cấp cá tươi đánh bắt theo ngày và các loại đặc sản cá khô truyền thống vùng biển Vàm Láng.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-sm uppercase tracking-wider mb-4 text-blue-200">Danh mục sản phẩm</h4>
+                <ul class="space-y-2 text-xs text-blue-100">
+                    <li><a href="#fresh-fish" class="hover:text-accent transition">Cá tươi theo ngày</a></li>
+                    <li><a href="#dried-fish" class="hover:text-accent transition">Cá khô đặc sản</a></li>
+                    <li><a href="#specialties" class="hover:text-accent transition">Đặc sản quê nhà</a></li>
+                    <li><a href="#process" class="hover:text-accent transition">Quy trình đóng gói</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-sm uppercase tracking-wider mb-4 text-blue-200">Chính sách & Hỗ trợ</h4>
+                <ul class="space-y-2 text-xs text-blue-100">
+                    <li><a href="#" class="hover:text-accent transition">Chính sách giao hàng</a></li>
+                    <li><a href="#" class="hover:text-accent transition">Chính sách bảo quản</a></li>
+                    <li><a href="#" class="hover:text-accent transition">Chính sách đổi trả & kiểm hàng</a></li>
+                    <li><a href="tel:0912340292" class="hover:text-accent transition">Hotline tư vấn: 0912.340.292</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-sm uppercase tracking-wider mb-4 text-blue-200">Thông tin liên hệ</h4>
+                <div class="space-y-3 text-xs text-blue-100">
+                    <p class="flex items-start space-x-2">
+                        <i class="fa-solid fa-location-dot mt-1 text-accent"></i>
+                        <span>Thị trấn Vàm Láng, Gò Công Đông, Đồng Tháp.</span>
+                    </p>
+                    <p class="flex items-center space-x-2">
+                        <i class="fa-solid fa-phone text-accent"></i>
+                        <span>Hotline / Zalo: 0912 340 292</span>
+                    </p>
+                    <p class="flex items-center space-x-2">
+                        <i class="fa-solid fa-envelope text-accent"></i>
+                        <span>haisanvamlang@gmail.com</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 pt-8 border-t border-blue-900/55 text-center text-xs text-blue-200">
+            <p>&copy; 2026 Bản quyền thuộc về HẢI SẢN VÀM LÁNG. Mọi quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons (Mobile / Quick Contact) -->
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col space-y-3">
+        <a href="https://zalo.me/0912340292" target="_blank" class="w-12 h-12 bg-accent hover:bg-blue-600 text-white rounded-full shadow-xl flex items-center justify-center text-xl transition transform hover:scale-110" title="Nhắn Zalo">
+            <i class="fa-solid fa-comment-dots"></i>
+        </a>
+        <a href="tel:0912340292" class="w-12 h-12 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full shadow-xl flex items-center justify-center text-xl transition transform hover:scale-110" title="Gọi ngay">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- Script tương tác mobile menu -->
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
